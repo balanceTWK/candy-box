@@ -106,6 +106,10 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=DITTLPRL
 
+[GeneratedDocument1]
+DocumentPath=Project Outputs for candy-box\Design Rule Check - PCB1.html
+DItemRevisionGUID=
+
 [Configuration1]
 Name=Default Configuration
 ParameterCount=0
