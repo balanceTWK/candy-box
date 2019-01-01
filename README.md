@@ -12,6 +12,7 @@
 | USB | 2个 | USB2 支持 OTG |
 | USB 转串口 | UART1 | 用于 FinSH 组件输出 |
 | humiture | DHT12 (I2C3) |  |
+| infrared | PWM4_0/ PWM4_1/ TMR3_TIMER1 | 四路红外信号发射，一路红外信号接收。  |
 | TF_CARD | SDIO1 |  |
 | Lidar | UART5 | 板载接口 |
 | DC-DC | 5V 1-2A | 输入 5V |
