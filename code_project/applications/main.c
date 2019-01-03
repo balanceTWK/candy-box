@@ -116,14 +116,14 @@ void dump_link_info(void)
 
 int main(void)
 {
-    rt_uint32_t result;
-    //dump_clock();
+    dump_clock();
     dump_cc_info();
     dump_link_info();
 
     rt_kprintf("build time: %s %s\n", __DATE__, __TIME__);
 
 #if defined(RT_USING_DFS) && defined(RT_USING_SDIO)
+    rt_uint32_t result;
     result = mmcsd_wait_cd_changed(RT_TICK_PER_SECOND);
     if (result == MMCSD_HOST_PLUGED)
     {

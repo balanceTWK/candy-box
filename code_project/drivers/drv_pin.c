@@ -678,16 +678,16 @@ static rt_err_t rt1052_pin_irq_enable(struct rt_device *device, rt_base_t pin, r
 int rt_hw_pin_init(void)
 {
     int ret = RT_EOK; 
-    
+
     rt1052_pin_ops.pin_mode        = rt1052_pin_mode; 
     rt1052_pin_ops.pin_read        = rt1052_pin_read; 
     rt1052_pin_ops.pin_write       = rt1052_pin_write; 
     rt1052_pin_ops.pin_attach_irq  = rt1052_pin_attach_irq; 
     rt1052_pin_ops.pin_detach_irq  = rt1052_pin_detach_irq;
     rt1052_pin_ops.pin_irq_enable  = rt1052_pin_irq_enable; 
-    
+
     ret = rt_device_pin_register("pin", &rt1052_pin_ops, RT_NULL);
-    
+
     return ret;
 }
 INIT_BOARD_EXPORT(rt_hw_pin_init); 
