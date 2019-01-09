@@ -38,14 +38,9 @@
 #define ENET_TXBD_NUM (4)
 #define ENET_RXBUFF_SIZE (ENET_FRAME_MAX_FRAMELEN)
 #define ENET_TXBUFF_SIZE (ENET_FRAME_MAX_FRAMELEN)
+#define PHY_ADDRESS     0x00u
 
-#if defined(BOARD_RT1050_FIRE) || defined(BOARD_RT1050_ATK)
-    #define PHY_ADDRESS     0x00u
-#endif
 
-#if defined(BOARD_RT1050_EVK) || defined(BOARD_RT1050_SeeedStudio)
-    #define PHY_ADDRESS     0x02u
-#endif
 /* debug option */
 //#define ETH_RX_DUMP
 //#define ETH_TX_DUMP

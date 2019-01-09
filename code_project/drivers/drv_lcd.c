@@ -141,7 +141,7 @@ static rt_err_t rt1050_lcd_init(rt_device_t device)
     lcd_config.vsw           = LCD_VSW;
 
     lcd_config.polarityFlags = kELCDIF_DataEnableActiveHigh |
-                               kELCDIF_VsyncActiveHigh      |
+                               kELCDIF_VsyncActiveLow       |
                                kELCDIF_HsyncActiveLow       |
                                kELCDIF_DriveDataOnRisingClkEdge;
 

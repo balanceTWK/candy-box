@@ -119,7 +119,6 @@ LR_IROM1 m_text_start m_text_size
     ; ncache RW data
     RW_m_ncache m_ncache_start m_ncache_size 
     { 
-        * (NonCacheable.init)
         * (NonCacheable)
     }
 }
