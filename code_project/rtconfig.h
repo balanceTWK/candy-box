@@ -208,6 +208,7 @@
 
 
 /* Select lcd driver */
+
 #define RT_USING_LCD
 #define LCD_WIDTH 1024
 #define LCD_HEIGHT 600
