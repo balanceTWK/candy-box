@@ -1,5 +1,9 @@
 mainmenu "RT-Thread Configuration"
 
+config PKG_USING_RW007
+	bool "Using RW007"
+    default n
+
 config $BSP_DIR
     string
     option env="BSP_ROOT"
@@ -390,6 +394,13 @@ endmenu
         bool "Using hp rtc"
         select RT_USING_RTC
         select RT_USING_LIBC
+        default n 
+#endmenu
+
+#menu "Select TOUCH driver"
+    config BSP_USING_TOUCH
+        bool "Using touch"
+        select RT_USING_HW_I2C1
         default n 
 #endmenu
 

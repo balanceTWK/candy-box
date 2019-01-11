@@ -37,6 +37,9 @@ if GetDepend('RT_USING_SPI_FLASH'):
 # add i2cbus driver code
 if GetDepend('RT_USING_I2C'):
     src += ['drv_i2c.c']
+    # add i2cbus driver code
+    if GetDepend('BSP_USING_TOUCH'):
+        src += ['drv_gt811.c']
 
 # add lcd driver code
 if GetDepend('RT_USING_LCD'):
