@@ -163,7 +163,6 @@
         <option>
           <name>CCDefines</name>
           <state />
-          <state>FSL_FEATURE_PHYKSZ8081_USE_RMII50M_MODE</state>
           <state>CPU_MIMXRT1052DVL6B</state>
           <state>SKIP_SYSCLK_INIT</state>
           <state>EVK_MCIMXRM</state>
@@ -301,30 +300,33 @@
           <name>CCIncludePath2</name>
           <state />
           <state>$PROJ_DIR$\rt-thread\include</state>
-          <state>$PROJ_DIR$\rt-thread\components\net\lwip-2.0.2\src</state>
+          <state>$PROJ_DIR$\packages\LittlevGL2RTT-latest\lvgl\lv_draw</state>
           <state>$PROJ_DIR$\rt-thread\components\finsh</state>
-          <state>$PROJ_DIR$\Libraries</state>
+          <state>$PROJ_DIR$\packages\LittlevGL2RTT-latest\lvgl\lv_hal</state>
+          <state>$PROJ_DIR$\packages\LittlevGL2RTT-latest\lvgl\lv_themes</state>
           <state>$PROJ_DIR$\Libraries\drivers</state>
-          <state>$PROJ_DIR$\rt-thread\components\net\lwip-2.0.2\src\include\posix</state>
-          <state>$PROJ_DIR$\rt-thread\components\net\lwip-2.0.2\src\include\ipv4</state>
           <state>$PROJ_DIR$\rt-thread\libcpu\arm\common</state>
           <state>$PROJ_DIR$\.</state>
-          <state>$PROJ_DIR$\xip</state>
+          <state>$PROJ_DIR$\rt-thread\components\libc\compilers\common</state>
           <state>$PROJ_DIR$\rt-thread\components\drivers\include</state>
+          <state>$PROJ_DIR$\packages\LittlevGL2RTT-latest\lvgl\lv_misc</state>
+          <state>$PROJ_DIR$\packages\LittlevGL2RTT-latest\lvgl</state>
           <state>$PROJ_DIR$\rt-thread\components\libc\compilers\dlib</state>
+          <state>$PROJ_DIR$\packages\LittlevGL2RTT-latest\example</state>
           <state>$PROJ_DIR$\Libraries\CMSIS\Include</state>
-          <state>$PROJ_DIR$\rt-thread\components\net\lwip-2.0.2\src\arch\include</state>
           <state>$PROJ_DIR$\rt-thread\libcpu\arm\cortex-m7</state>
+          <state>$PROJ_DIR$\packages\LittlevGL2RTT-latest</state>
           <state>$PROJ_DIR$\Libraries\utilities</state>
           <state>$PROJ_DIR$\applications</state>
           <state>$PROJ_DIR$\rt-thread\components\dfs\filesystems\devfs</state>
-          <state>$PROJ_DIR$\rt-thread\components\net\lwip-2.0.2\src\include\netif</state>
+          <state>$PROJ_DIR$\Libraries</state>
+          <state>$PROJ_DIR$\packages\LittlevGL2RTT-latest\lvgl\lv_misc\lv_fonts</state>
+          <state>$PROJ_DIR$\packages\LittlevGL2RTT-latest\lvgl\lv_core</state>
           <state>$PROJ_DIR$\rt-thread\components\dfs\include</state>
           <state>$PROJ_DIR$\rt-thread\components\dfs\filesystems\elmfat</state>
-          <state>$PROJ_DIR$\rt-thread\components\libc\compilers\common</state>
-          <state>$PROJ_DIR$\rt-thread\components\drivers\spi</state>
+          <state>$PROJ_DIR$\packages\LittlevGL2RTT-latest\lvgl\lv_objx</state>
           <state>$PROJ_DIR$\drivers</state>
-          <state>$PROJ_DIR$\rt-thread\components\net\lwip-2.0.2\src\include</state>
+          <state>$PROJ_DIR$\rt-thread\components\drivers\spi</state>
         </option>
         <option>
           <name>CCStdIncCheck</name>
@@ -1106,7 +1108,6 @@
         <option>
           <name>CCDefines</name>
           <state>NDEBUG</state>
-          <state>FSL_FEATURE_PHYKSZ8081_USE_RMII50M_MODE</state>
           <state>CPU_MIMXRT1052DVL6B</state>
           <state>SKIP_SYSCLK_INIT</state>
           <state>EVK_MCIMXRM</state>
@@ -1244,30 +1245,33 @@
           <name>CCIncludePath2</name>
           <state />
           <state>$PROJ_DIR$\rt-thread\include</state>
-          <state>$PROJ_DIR$\rt-thread\components\net\lwip-2.0.2\src</state>
+          <state>$PROJ_DIR$\packages\LittlevGL2RTT-latest\lvgl\lv_draw</state>
           <state>$PROJ_DIR$\rt-thread\components\finsh</state>
-          <state>$PROJ_DIR$\Libraries</state>
+          <state>$PROJ_DIR$\packages\LittlevGL2RTT-latest\lvgl\lv_hal</state>
+          <state>$PROJ_DIR$\packages\LittlevGL2RTT-latest\lvgl\lv_themes</state>
           <state>$PROJ_DIR$\Libraries\drivers</state>
-          <state>$PROJ_DIR$\rt-thread\components\net\lwip-2.0.2\src\include\posix</state>
-          <state>$PROJ_DIR$\rt-thread\components\net\lwip-2.0.2\src\include\ipv4</state>
           <state>$PROJ_DIR$\rt-thread\libcpu\arm\common</state>
           <state>$PROJ_DIR$\.</state>
-          <state>$PROJ_DIR$\xip</state>
+          <state>$PROJ_DIR$\rt-thread\components\libc\compilers\common</state>
           <state>$PROJ_DIR$\rt-thread\components\drivers\include</state>
+          <state>$PROJ_DIR$\packages\LittlevGL2RTT-latest\lvgl\lv_misc</state>
+          <state>$PROJ_DIR$\packages\LittlevGL2RTT-latest\lvgl</state>
           <state>$PROJ_DIR$\rt-thread\components\libc\compilers\dlib</state>
+          <state>$PROJ_DIR$\packages\LittlevGL2RTT-latest\example</state>
           <state>$PROJ_DIR$\Libraries\CMSIS\Include</state>
-          <state>$PROJ_DIR$\rt-thread\components\net\lwip-2.0.2\src\arch\include</state>
           <state>$PROJ_DIR$\rt-thread\libcpu\arm\cortex-m7</state>
+          <state>$PROJ_DIR$\packages\LittlevGL2RTT-latest</state>
           <state>$PROJ_DIR$\Libraries\utilities</state>
           <state>$PROJ_DIR$\applications</state>
           <state>$PROJ_DIR$\rt-thread\components\dfs\filesystems\devfs</state>
-          <state>$PROJ_DIR$\rt-thread\components\net\lwip-2.0.2\src\include\netif</state>
+          <state>$PROJ_DIR$\Libraries</state>
+          <state>$PROJ_DIR$\packages\LittlevGL2RTT-latest\lvgl\lv_misc\lv_fonts</state>
+          <state>$PROJ_DIR$\packages\LittlevGL2RTT-latest\lvgl\lv_core</state>
           <state>$PROJ_DIR$\rt-thread\components\dfs\include</state>
           <state>$PROJ_DIR$\rt-thread\components\dfs\filesystems\elmfat</state>
-          <state>$PROJ_DIR$\rt-thread\components\libc\compilers\common</state>
-          <state>$PROJ_DIR$\rt-thread\components\drivers\spi</state>
+          <state>$PROJ_DIR$\packages\LittlevGL2RTT-latest\lvgl\lv_objx</state>
           <state>$PROJ_DIR$\drivers</state>
-          <state>$PROJ_DIR$\rt-thread\components\net\lwip-2.0.2\src\include</state>
+          <state>$PROJ_DIR$\rt-thread\components\drivers\spi</state>
         </option>
         <option>
           <name>CCStdIncCheck</name>
@@ -1927,16 +1931,13 @@
       <name>$PROJ_DIR$\drivers\drv_i2c.c</name>
     </file>
     <file>
+      <name>$PROJ_DIR$\drivers\drv_gt811.c</name>
+    </file>
+    <file>
       <name>$PROJ_DIR$\drivers\drv_lcd.c</name>
     </file>
     <file>
       <name>$PROJ_DIR$\drivers\drv_sdio.c</name>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\drivers\drv_eth.c</name>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\drivers\fsl_phy.c</name>
     </file>
   </group>
   <group>
@@ -2126,12 +2127,240 @@
     </file>
   </group>
   <group>
-    <name>xip</name>
+    <name>LittlevGL2RTT</name>
     <file>
-      <name>$PROJ_DIR$\xip\fsl_flexspi_nor_boot.c</name>
+      <name>$PROJ_DIR$\packages\LittlevGL2RTT-latest\littlevgl2rtt.c</name>
     </file>
     <file>
-      <name>$PROJ_DIR$\xip\fsl_flexspi_nor_flash.c</name>
+      <name>$PROJ_DIR$\packages\LittlevGL2RTT-latest\lvgl\lv_core\lv_group.c</name>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\packages\LittlevGL2RTT-latest\lvgl\lv_core\lv_indev.c</name>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\packages\LittlevGL2RTT-latest\lvgl\lv_core\lv_obj.c</name>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\packages\LittlevGL2RTT-latest\lvgl\lv_core\lv_refr.c</name>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\packages\LittlevGL2RTT-latest\lvgl\lv_core\lv_style.c</name>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\packages\LittlevGL2RTT-latest\lvgl\lv_core\lv_vdb.c</name>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\packages\LittlevGL2RTT-latest\lvgl\lv_draw\lv_draw.c</name>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\packages\LittlevGL2RTT-latest\lvgl\lv_draw\lv_draw_rbasic.c</name>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\packages\LittlevGL2RTT-latest\lvgl\lv_draw\lv_draw_vbasic.c</name>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\packages\LittlevGL2RTT-latest\lvgl\lv_hal\lv_hal_disp.c</name>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\packages\LittlevGL2RTT-latest\lvgl\lv_hal\lv_hal_indev.c</name>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\packages\LittlevGL2RTT-latest\lvgl\lv_hal\lv_hal_tick.c</name>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\packages\LittlevGL2RTT-latest\lvgl\lv_misc\lv_anim.c</name>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\packages\LittlevGL2RTT-latest\lvgl\lv_misc\lv_area.c</name>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\packages\LittlevGL2RTT-latest\lvgl\lv_misc\lv_circ.c</name>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\packages\LittlevGL2RTT-latest\lvgl\lv_misc\lv_color.c</name>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\packages\LittlevGL2RTT-latest\lvgl\lv_misc\lv_font.c</name>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\packages\LittlevGL2RTT-latest\lvgl\lv_misc\lv_fs.c</name>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\packages\LittlevGL2RTT-latest\lvgl\lv_misc\lv_ll.c</name>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\packages\LittlevGL2RTT-latest\lvgl\lv_misc\lv_math.c</name>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\packages\LittlevGL2RTT-latest\lvgl\lv_misc\lv_mem.c</name>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\packages\LittlevGL2RTT-latest\lvgl\lv_misc\lv_task.c</name>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\packages\LittlevGL2RTT-latest\lvgl\lv_misc\lv_templ.c</name>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\packages\LittlevGL2RTT-latest\lvgl\lv_misc\lv_trigo.c</name>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\packages\LittlevGL2RTT-latest\lvgl\lv_misc\lv_txt.c</name>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\packages\LittlevGL2RTT-latest\lvgl\lv_misc\lv_ufs.c</name>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\packages\LittlevGL2RTT-latest\lvgl\lv_misc\lv_fonts\lv_font_dejavu_10.c</name>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\packages\LittlevGL2RTT-latest\lvgl\lv_misc\lv_fonts\lv_font_dejavu_10_cyrillic.c</name>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\packages\LittlevGL2RTT-latest\lvgl\lv_misc\lv_fonts\lv_font_dejavu_10_latin_sup.c</name>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\packages\LittlevGL2RTT-latest\lvgl\lv_misc\lv_fonts\lv_font_dejavu_20.c</name>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\packages\LittlevGL2RTT-latest\lvgl\lv_misc\lv_fonts\lv_font_dejavu_20_cyrillic.c</name>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\packages\LittlevGL2RTT-latest\lvgl\lv_misc\lv_fonts\lv_font_dejavu_20_latin_sup.c</name>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\packages\LittlevGL2RTT-latest\lvgl\lv_misc\lv_fonts\lv_font_dejavu_30.c</name>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\packages\LittlevGL2RTT-latest\lvgl\lv_misc\lv_fonts\lv_font_dejavu_30_cyrillic.c</name>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\packages\LittlevGL2RTT-latest\lvgl\lv_misc\lv_fonts\lv_font_dejavu_30_latin_sup.c</name>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\packages\LittlevGL2RTT-latest\lvgl\lv_misc\lv_fonts\lv_font_dejavu_40.c</name>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\packages\LittlevGL2RTT-latest\lvgl\lv_misc\lv_fonts\lv_font_dejavu_40_cyrillic.c</name>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\packages\LittlevGL2RTT-latest\lvgl\lv_misc\lv_fonts\lv_font_dejavu_40_latin_sup.c</name>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\packages\LittlevGL2RTT-latest\lvgl\lv_misc\lv_fonts\lv_font_symbol_10.c</name>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\packages\LittlevGL2RTT-latest\lvgl\lv_misc\lv_fonts\lv_font_symbol_20.c</name>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\packages\LittlevGL2RTT-latest\lvgl\lv_misc\lv_fonts\lv_font_symbol_30.c</name>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\packages\LittlevGL2RTT-latest\lvgl\lv_misc\lv_fonts\lv_font_symbol_40.c</name>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\packages\LittlevGL2RTT-latest\lvgl\lv_objx\lv_bar.c</name>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\packages\LittlevGL2RTT-latest\lvgl\lv_objx\lv_btn.c</name>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\packages\LittlevGL2RTT-latest\lvgl\lv_objx\lv_btnm.c</name>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\packages\LittlevGL2RTT-latest\lvgl\lv_objx\lv_cb.c</name>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\packages\LittlevGL2RTT-latest\lvgl\lv_objx\lv_chart.c</name>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\packages\LittlevGL2RTT-latest\lvgl\lv_objx\lv_cont.c</name>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\packages\LittlevGL2RTT-latest\lvgl\lv_objx\lv_ddlist.c</name>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\packages\LittlevGL2RTT-latest\lvgl\lv_objx\lv_gauge.c</name>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\packages\LittlevGL2RTT-latest\lvgl\lv_objx\lv_img.c</name>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\packages\LittlevGL2RTT-latest\lvgl\lv_objx\lv_kb.c</name>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\packages\LittlevGL2RTT-latest\lvgl\lv_objx\lv_label.c</name>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\packages\LittlevGL2RTT-latest\lvgl\lv_objx\lv_led.c</name>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\packages\LittlevGL2RTT-latest\lvgl\lv_objx\lv_line.c</name>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\packages\LittlevGL2RTT-latest\lvgl\lv_objx\lv_list.c</name>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\packages\LittlevGL2RTT-latest\lvgl\lv_objx\lv_lmeter.c</name>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\packages\LittlevGL2RTT-latest\lvgl\lv_objx\lv_mbox.c</name>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\packages\LittlevGL2RTT-latest\lvgl\lv_objx\lv_objx_templ.c</name>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\packages\LittlevGL2RTT-latest\lvgl\lv_objx\lv_page.c</name>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\packages\LittlevGL2RTT-latest\lvgl\lv_objx\lv_roller.c</name>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\packages\LittlevGL2RTT-latest\lvgl\lv_objx\lv_slider.c</name>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\packages\LittlevGL2RTT-latest\lvgl\lv_objx\lv_sw.c</name>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\packages\LittlevGL2RTT-latest\lvgl\lv_objx\lv_ta.c</name>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\packages\LittlevGL2RTT-latest\lvgl\lv_objx\lv_tabview.c</name>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\packages\LittlevGL2RTT-latest\lvgl\lv_objx\lv_win.c</name>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\packages\LittlevGL2RTT-latest\lvgl\lv_themes\lv_theme.c</name>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\packages\LittlevGL2RTT-latest\lvgl\lv_themes\lv_theme_alien.c</name>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\packages\LittlevGL2RTT-latest\lvgl\lv_themes\lv_theme_default.c</name>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\packages\LittlevGL2RTT-latest\lvgl\lv_themes\lv_theme_material.c</name>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\packages\LittlevGL2RTT-latest\lvgl\lv_themes\lv_theme_mono.c</name>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\packages\LittlevGL2RTT-latest\lvgl\lv_themes\lv_theme_night.c</name>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\packages\LittlevGL2RTT-latest\lvgl\lv_themes\lv_theme_templ.c</name>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\packages\LittlevGL2RTT-latest\lvgl\lv_themes\lv_theme_zen.c</name>
+    </file>
+  </group>
+  <group>
+    <name>LittlevGL2RTT_Demo</name>
+    <file>
+      <name>$PROJ_DIR$\packages\LittlevGL2RTT-latest\example\littlevgl2rtt_demo.c</name>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\packages\LittlevGL2RTT-latest\example\lv_test_theme.c</name>
     </file>
   </group>
   <group>
@@ -2162,6 +2391,9 @@
     </file>
     <file>
       <name>$PROJ_DIR$\rt-thread\src\memheap.c</name>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\rt-thread\src\mempool.c</name>
     </file>
     <file>
       <name>$PROJ_DIR$\rt-thread\src\object.c</name>
@@ -2210,6 +2442,12 @@
     </file>
     <file>
       <name>$PROJ_DIR$\rt-thread\components\dfs\src\dfs_posix.c</name>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\rt-thread\components\dfs\src\poll.c</name>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\rt-thread\components\dfs\src\select.c</name>
     </file>
     <file>
       <name>$PROJ_DIR$\rt-thread\components\dfs\filesystems\devfs\devfs.c</name>
@@ -2381,117 +2619,6 @@
     </file>
     <file>
       <name>$PROJ_DIR$\rt-thread\components\libc\compilers\dlib\time.c</name>
-    </file>
-  </group>
-  <group>
-    <name>lwIP</name>
-    <file>
-      <name>$PROJ_DIR$\rt-thread\components\net\lwip-2.0.2\src\arch\sys_arch.c</name>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\rt-thread\components\net\lwip-2.0.2\src\api\api_lib.c</name>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\rt-thread\components\net\lwip-2.0.2\src\api\api_msg.c</name>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\rt-thread\components\net\lwip-2.0.2\src\api\err.c</name>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\rt-thread\components\net\lwip-2.0.2\src\api\netbuf.c</name>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\rt-thread\components\net\lwip-2.0.2\src\api\netdb.c</name>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\rt-thread\components\net\lwip-2.0.2\src\api\netifapi.c</name>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\rt-thread\components\net\lwip-2.0.2\src\api\sockets.c</name>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\rt-thread\components\net\lwip-2.0.2\src\api\tcpip.c</name>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\rt-thread\components\net\lwip-2.0.2\src\core\def.c</name>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\rt-thread\components\net\lwip-2.0.2\src\core\dns.c</name>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\rt-thread\components\net\lwip-2.0.2\src\core\inet_chksum.c</name>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\rt-thread\components\net\lwip-2.0.2\src\core\init.c</name>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\rt-thread\components\net\lwip-2.0.2\src\core\ip.c</name>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\rt-thread\components\net\lwip-2.0.2\src\core\memp.c</name>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\rt-thread\components\net\lwip-2.0.2\src\core\netif.c</name>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\rt-thread\components\net\lwip-2.0.2\src\core\pbuf.c</name>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\rt-thread\components\net\lwip-2.0.2\src\core\raw.c</name>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\rt-thread\components\net\lwip-2.0.2\src\core\stats.c</name>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\rt-thread\components\net\lwip-2.0.2\src\core\sys.c</name>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\rt-thread\components\net\lwip-2.0.2\src\core\tcp.c</name>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\rt-thread\components\net\lwip-2.0.2\src\core\tcp_in.c</name>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\rt-thread\components\net\lwip-2.0.2\src\core\tcp_out.c</name>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\rt-thread\components\net\lwip-2.0.2\src\core\timeouts.c</name>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\rt-thread\components\net\lwip-2.0.2\src\core\udp.c</name>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\rt-thread\components\net\lwip-2.0.2\src\netif\ethernet.c</name>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\rt-thread\components\net\lwip-2.0.2\src\netif\ethernetif.c</name>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\rt-thread\components\net\lwip-2.0.2\src\netif\lowpan6.c</name>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\rt-thread\components\net\lwip-2.0.2\src\core\ipv4\autoip.c</name>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\rt-thread\components\net\lwip-2.0.2\src\core\ipv4\dhcp.c</name>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\rt-thread\components\net\lwip-2.0.2\src\core\ipv4\etharp.c</name>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\rt-thread\components\net\lwip-2.0.2\src\core\ipv4\icmp.c</name>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\rt-thread\components\net\lwip-2.0.2\src\core\ipv4\igmp.c</name>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\rt-thread\components\net\lwip-2.0.2\src\core\ipv4\ip4.c</name>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\rt-thread\components\net\lwip-2.0.2\src\core\ipv4\ip4_addr.c</name>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\rt-thread\components\net\lwip-2.0.2\src\core\ipv4\ip4_frag.c</name>
     </file>
   </group>
 </project>

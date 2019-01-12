@@ -1,18 +1,31 @@
-#include "drv_i2c.h"
 #include "drv_gt811.h"
-#include "drv_pin.h"
-#include "littlevgl2rtt.h" 
+
 //#define DRV_DEBUG
 #define DBG_ENABLE
-#define DBG_SECTION_NAME    "drv.rtc"
+#define DBG_SECTION_NAME "drv.rtc"
 #ifdef DRV_DEBUG
-#define DBG_LEVEL                      DBG_LOG
+#define DBG_LEVEL         DBG_LOG
 #else
-#define DBG_LEVEL                      DBG_INFO
+#define DBG_LEVEL         DBG_INFO
 #endif /* DRV_DEBUG */
 #include <rtdbg.h>
 
+struct gt811_device
+{
+#if !defined(PKG_USING_LITTLEVGL2RTT)
+    volatile rt_uint8_t Flag;
+    volatile rt_uint8_t          Count;
+    volatile rt_uint8_t          Static;
+    volatile rt_uint8_t          TouchPointFlag;
+#endif 
+    volatile rt_uint16_t         x[GT811_MAX_TOUCH];     /* Touch the X */
+    volatile rt_uint16_t         y[GT811_MAX_TOUCH];     /* Touch the Y */
+    volatile rt_uint8_t          ppr[GT811_MAX_TOUCH];   /* Touch the pressure */
+};
+
 static struct rt_i2c_bus_device *gt811_i2c_device = RT_NULL;
+struct gt811_device GT811_Dev;
+
 static volatile rt_uint8_t GTP_CFG_DATA[] =
 {
     0x12,0x10,0x0E,0x0C,0x0A,0x08,0x06,0x04,0x02,0x00,0x05,0x55,0x15,0x55,0x25,0x55,
@@ -24,16 +37,9 @@ static volatile rt_uint8_t GTP_CFG_DATA[] =
     0x25,0x28,0x14,0x00,0x00,0x00,0x00,0x00,0x00,0x01
 };
 
-GT811_Device GT811_Dev;
-
-static void GT811_Delay(uint32_t value)
-{
-    rt_thread_delay(1);
-}
-
 static rt_err_t write_regs(struct rt_i2c_bus_device *bus, rt_uint16_t reg, rt_uint8_t *data_buf, uint8_t len)
 {
-    rt_uint8_t buf[len + 2];
+    rt_uint8_t* buf = rt_malloc(len + 2);
     struct rt_i2c_msg msgs;
 
     buf[0] = (rt_uint8_t)(reg >> 8);
@@ -51,10 +57,12 @@ static rt_err_t write_regs(struct rt_i2c_bus_device *bus, rt_uint16_t reg, rt_ui
 
     if (rt_i2c_transfer(bus, &msgs, 1) == 1)
     {
+        rt_free(buf);
         return RT_EOK;
     }
     else
     {
+        rt_free(buf);
         return -RT_ERROR;
     }
 }
@@ -124,8 +132,6 @@ static void GT811_Read_Cfg()
 static void GT811_Reset()
 {
     rt_pin_mode(GT811_RESET_PIN, PIN_MODE_OUTPUT);
-//    rt_pin_mode(GT811_EN_PIN, PIN_MODE_OUTPUT);
-//    rt_pin_write(GT811_EN_PIN, PIN_LOW);
     rt_pin_write(GT811_RESET_PIN, PIN_HIGH);
     rt_thread_mdelay(200);
     rt_pin_write(GT811_RESET_PIN, PIN_LOW);
@@ -134,7 +140,10 @@ static void GT811_Reset()
     rt_thread_mdelay(200);
 }
 
+#if defined(PKG_USING_LITTLEVGL2RTT)
+
 struct rt_semaphore touch_sem;
+
 void touch_thread_entry(void* parameter)
 {
     rt_uint8_t buf[34];
@@ -145,39 +154,62 @@ void touch_thread_entry(void* parameter)
         __DSB();
         LOG_D("rt_sem_take touch_sem");
 #if (GT811_EXCHG_XY == 1)
+
+#if (GT811_MAX_TOUCH >= 1)
         GT811_Dev.y[0] = GT811_MAX_HEIGHT - (((uint16_t)buf[2] << 8) + buf[3]);
         GT811_Dev.x[0] = ((uint16_t)buf[4] << 8) + buf[5];
         GT811_Dev.ppr[0] = buf[6];
+#endif
+#if (GT811_MAX_TOUCH >= 2)
         GT811_Dev.y[1] = GT811_MAX_HEIGHT - (((uint16_t)buf[7] << 8) + buf[8]);
         GT811_Dev.x[1] = ((uint16_t)buf[9] << 8) + buf[10];
         GT811_Dev.ppr[1] = buf[11];
+#endif
+#if (GT811_MAX_TOUCH >= 3)
         GT811_Dev.y[2] = GT811_MAX_HEIGHT - (((uint16_t)buf[12] << 8) + buf[13]);
         GT811_Dev.x[2] = ((uint16_t)buf[14] << 8) + buf[15];
         GT811_Dev.ppr[2] = buf[16];
+#endif
+#if (GT811_MAX_TOUCH >= 4)
         GT811_Dev.y[3] = GT811_MAX_HEIGHT - (((uint16_t)buf[17] << 8) + buf[24]);
         GT811_Dev.x[3] = ((uint16_t)buf[25] << 8) + buf[26];
         GT811_Dev.ppr[3] = buf[27];
+#endif
+#if (GT811_MAX_TOUCH >= 5)
         GT811_Dev.y[4] = GT811_MAX_HEIGHT - (((uint16_t)buf[28] << 8) + buf[29]);
         GT811_Dev.x[4] = ((uint16_t)buf[30] << 8) + buf[31];
         GT811_Dev.ppr[4] = buf[32];
-#else
+#endif
+
+#else /* (GT811_EXCHG_XY == 1) */
+
+#if (GT811_MAX_TOUCH >= 1)
         GT811_Dev.y[0] = ((uint16_t)buf[2] << 8) + buf[3];
         GT811_Dev.x[0] = GT811_MAX_WIDTH - (((uint16_t)buf[4] << 8) + buf[5]);
         GT811_Dev.ppr[0] = buf[6];
+#endif
+#if (GT811_MAX_TOUCH >= 2)
         GT811_Dev.y[1] = ((uint16_t)buf[7] << 8) + buf[8];
         GT811_Dev.x[1] = GT811_MAX_WIDTH - (((uint16_t)buf[9] << 8) + buf[10]);
         GT811_Dev.ppr[1] = buf[11];
+#endif
+#if (GT811_MAX_TOUCH >= 3)
         GT811_Dev.y[2] = ((uint16_t)buf[12] << 8) + buf[13];
         GT811_Dev.x[2] = GT811_MAX_WIDTH - (((uint16_t)buf[14] << 8) + buf[15]);
         GT811_Dev.ppr[2] = buf[16];
+#endif
+#if (GT811_MAX_TOUCH >= 4)
         GT811_Dev.y[3] = ((uint16_t)buf[17] << 8) + buf[24];
         GT811_Dev.x[3] = GT811_MAX_WIDTH - (((uint16_t)buf[25] << 8) + buf[26]);
         GT811_Dev.ppr[3] = buf[27];
+#endif
+#if (GT811_MAX_TOUCH >= 5)
         GT811_Dev.y[4] = ((uint16_t)buf[28] << 8) + buf[29];
         GT811_Dev.x[4] = GT811_MAX_WIDTH - (((uint16_t)buf[30] << 8) + buf[31]);
         GT811_Dev.ppr[4] = buf[32];
 #endif
-//rt_kprintf("GT811_Dev.y[0]:%d GT811_Dev.x[0]:%d GT811_Dev.ppr[0]:%d\n",GT811_Dev.y[0],GT811_Dev.x[0],GT811_Dev.ppr[0]);
+
+#endif /* (GT811_EXCHG_XY == 1) */
         if((GT811_Dev.ppr[0])==0)
         {
             littlevgl2rtt_send_input_event(GT811_Dev.x[0], GT811_Dev.y[0], LITTLEVGL2RTT_INPUT_UP);
@@ -192,12 +224,14 @@ void touch_thread_entry(void* parameter)
         }
         }
 }
+
 void touch_irq(void *args)
 {
     LOG_D("touch_irq!");
     rt_sem_release(&touch_sem);
 }
-uint8_t GT811_Init(void)
+#endif
+int GT811_Init(void)
 {
     uint16_t version = 0;
     uint8_t temp;
@@ -210,11 +244,7 @@ uint8_t GT811_Init(void)
     }
     else
     {
-        rt_pin_mode(GT811_INT_PIN, PIN_MODE_INPUT_PULLUP);
-        rt_pin_attach_irq(GT811_INT_PIN,PIN_IRQ_MODE_FALLING,touch_irq,RT_NULL);
         GT811_Reset();
-        rt_sem_init(&touch_sem , "lcd_touch",   0,    RT_IPC_FLAG_FIFO);
-        rt_pin_irq_enable(GT811_INT_PIN, PIN_IRQ_ENABLE);
         GTP_CFG_DATA[62] = GT811_MAX_WIDTH >> 8;
         GTP_CFG_DATA[61] = GT811_MAX_WIDTH & 0xff;
         GTP_CFG_DATA[60] = GT811_MAX_HEIGHT >> 8;
@@ -224,24 +254,40 @@ uint8_t GT811_Init(void)
         version = (uint16_t)temp << 8;
         read_regs(gt811_i2c_device, 0X718, &temp, 1);
         version |= temp;
-        LOG_I("version:%x", version);
 
         if (version == 0X2010)
         {
+            LOG_D("version:%x", version);
             temp = GT811_Send_Cfg((uint8_t *)GTP_CFG_DATA, sizeof(GTP_CFG_DATA));
         }
-        else temp = 2;
+        else
+        {
+            LOG_E("version:%x != 0X2010", version);
+        }
 #ifdef DRV_DEBUG
         GT811_Read_Cfg();
 #endif
+#if defined(PKG_USING_LITTLEVGL2RTT)
         rt_thread_t thread = RT_NULL; 
+        rt_sem_init(&touch_sem , "lcd_touch",   0,    RT_IPC_FLAG_FIFO);
+        rt_pin_mode(GT811_INT_PIN, PIN_MODE_INPUT_PULLUP);
+        rt_pin_attach_irq(GT811_INT_PIN,PIN_IRQ_MODE_FALLING,touch_irq,RT_NULL);
+        rt_pin_irq_enable(GT811_INT_PIN, PIN_IRQ_ENABLE);
         thread = rt_thread_create("lcd_touch", touch_thread_entry, RT_NULL, 512, 7, 10); 
         rt_thread_startup(thread);
-    }
+#endif
 
+    }
     return temp;
 }
 INIT_APP_EXPORT(GT811_Init);
+
+#if !defined(PKG_USING_LITTLEVGL2RTT)
+
+static void GT811_Delay(uint32_t value)
+{
+    rt_thread_delay(value);
+}
 
 void GT811_Scan(void)
 {
@@ -333,3 +379,4 @@ void GT811_Scan(void)
     GT811_Dev.ppr[4] = buf[32];
 #endif
 }
+#endif
