@@ -2,7 +2,7 @@
 
 //#define DRV_DEBUG
 #define DBG_ENABLE
-#define DBG_SECTION_NAME "drv.rtc"
+#define DBG_SECTION_NAME "drv.gt811"
 #ifdef DRV_DEBUG
 #define DBG_LEVEL         DBG_LOG
 #else

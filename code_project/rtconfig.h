@@ -7,7 +7,7 @@
 
 /* RT-Thread Kernel */
 
-#define RT_NAME_MAX 8
+#define RT_NAME_MAX 16
 #define RT_ALIGN_SIZE 4
 #define RT_THREAD_PRIORITY_32
 #define RT_THREAD_PRIORITY_MAX 32
@@ -61,7 +61,7 @@
 #define RT_USING_FINSH
 #define FINSH_THREAD_NAME "tshell"
 #define FINSH_USING_HISTORY
-#define FINSH_HISTORY_LINES 5
+#define FINSH_HISTORY_LINES 10
 #define FINSH_USING_SYMTAB
 #define FINSH_USING_DESCRIPTION
 #define FINSH_THREAD_PRIORITY 20
@@ -185,7 +185,6 @@
 #define LV_HOR_RES 1024
 #define LV_VER_RES 600
 #define LV_DPI 50
-#define LITTLEVGL2RTT_USING_DEMO
 
 /* peripheral libraries and drivers */
 
@@ -233,5 +232,6 @@
 #define RT_USING_SDRAM
 #define RT_USING_RTC_HP
 #define BSP_USING_TOUCH
+#define BSP_USING_DHT12
 
 #endif

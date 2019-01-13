@@ -2,6 +2,9 @@ mainmenu "RT-Thread Configuration"
 
 config PKG_USING_RW007
 	bool "Using RW007"
+    config RW007_USING_DEMO
+        bool "RW007 demo"
+        depends on PKG_USING_RW007
     default n
 
 config $BSP_DIR
@@ -401,6 +404,13 @@ endmenu
     config BSP_USING_TOUCH
         bool "Using touch"
         select RT_USING_HW_I2C1
+        default n 
+#endmenu
+
+#menu "Select DHT12 driver"
+    config BSP_USING_DHT12
+        bool "Using dht12"
+        select RT_USING_HW_I2C3
         default n 
 #endmenu
 

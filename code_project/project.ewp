@@ -312,7 +312,6 @@
           <state>$PROJ_DIR$\packages\LittlevGL2RTT-latest\lvgl\lv_misc</state>
           <state>$PROJ_DIR$\packages\LittlevGL2RTT-latest\lvgl</state>
           <state>$PROJ_DIR$\rt-thread\components\libc\compilers\dlib</state>
-          <state>$PROJ_DIR$\packages\LittlevGL2RTT-latest\example</state>
           <state>$PROJ_DIR$\Libraries\CMSIS\Include</state>
           <state>$PROJ_DIR$\rt-thread\libcpu\arm\cortex-m7</state>
           <state>$PROJ_DIR$\packages\LittlevGL2RTT-latest</state>
@@ -1257,7 +1256,6 @@
           <state>$PROJ_DIR$\packages\LittlevGL2RTT-latest\lvgl\lv_misc</state>
           <state>$PROJ_DIR$\packages\LittlevGL2RTT-latest\lvgl</state>
           <state>$PROJ_DIR$\rt-thread\components\libc\compilers\dlib</state>
-          <state>$PROJ_DIR$\packages\LittlevGL2RTT-latest\example</state>
           <state>$PROJ_DIR$\Libraries\CMSIS\Include</state>
           <state>$PROJ_DIR$\rt-thread\libcpu\arm\cortex-m7</state>
           <state>$PROJ_DIR$\packages\LittlevGL2RTT-latest</state>
@@ -1889,19 +1887,10 @@
   <group>
     <name>Applications</name>
     <file>
-      <name>$PROJ_DIR$\applications\device_test.c</name>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\applications\lcd_init.c</name>
+      <name>$PROJ_DIR$\applications\littlevgl_app.c</name>
     </file>
     <file>
       <name>$PROJ_DIR$\applications\main.c</name>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\applications\mem_dump.c</name>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\applications\mem_test.c</name>
     </file>
   </group>
   <group>
@@ -1938,6 +1927,9 @@
     </file>
     <file>
       <name>$PROJ_DIR$\drivers\drv_sdio.c</name>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\drivers\drv_dht12.c</name>
     </file>
   </group>
   <group>
@@ -2352,15 +2344,6 @@
     </file>
     <file>
       <name>$PROJ_DIR$\packages\LittlevGL2RTT-latest\lvgl\lv_themes\lv_theme_zen.c</name>
-    </file>
-  </group>
-  <group>
-    <name>LittlevGL2RTT_Demo</name>
-    <file>
-      <name>$PROJ_DIR$\packages\LittlevGL2RTT-latest\example\littlevgl2rtt_demo.c</name>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\packages\LittlevGL2RTT-latest\example\lv_test_theme.c</name>
     </file>
   </group>
   <group>

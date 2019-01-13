@@ -335,10 +335,10 @@
             <v6WtE>0</v6WtE>
             <v6Rtti>0</v6Rtti>
             <VariousControls>
-              <MiscControls>--library_interface=armcc --library_type=standardlib --diag_suppress=66,1296,186</MiscControls>
+              <MiscControls>--gnu -g -W --library_interface=armcc --library_type=standardlib --diag_suppress=66,1296,186</MiscControls>
               <Define>RT_USING_ARM_LIBC, EVK_MCIMXRM, CPU_MIMXRT1052DVL6B, SKIP_SYSCLK_INIT, FSL_SDK_ENABLE_DRIVER_CACHE_CONTROL=1</Define>
               <Undefine></Undefine>
-              <IncludePath>applications;.;drivers;Libraries;Libraries\drivers;Libraries\utilities;Libraries\CMSIS\Include;packages\LittlevGL2RTT-latest;packages\LittlevGL2RTT-latest\lvgl;packages\LittlevGL2RTT-latest\lvgl\lv_core;packages\LittlevGL2RTT-latest\lvgl\lv_draw;packages\LittlevGL2RTT-latest\lvgl\lv_hal;packages\LittlevGL2RTT-latest\lvgl\lv_misc;packages\LittlevGL2RTT-latest\lvgl\lv_misc\lv_fonts;packages\LittlevGL2RTT-latest\lvgl\lv_objx;packages\LittlevGL2RTT-latest\lvgl\lv_themes;packages\LittlevGL2RTT-latest\example;rt-thread\include;rt-thread\libcpu\arm\cortex-m7;rt-thread\libcpu\arm\common;rt-thread\components\dfs\include;rt-thread\components\dfs\filesystems\devfs;rt-thread\components\dfs\filesystems\elmfat;rt-thread\components\drivers\include;rt-thread\components\drivers\include;rt-thread\components\drivers\include;rt-thread\components\drivers\include;rt-thread\components\drivers\include;rt-thread\components\drivers\spi;rt-thread\components\drivers\include;rt-thread\components\drivers\include;rt-thread\components\finsh;rt-thread\components\libc\compilers\armlibc;rt-thread\components\libc\compilers\common</IncludePath>
+              <IncludePath>applications;.;drivers;Libraries;Libraries\drivers;Libraries\utilities;Libraries\CMSIS\Include;packages\LittlevGL2RTT-latest;packages\LittlevGL2RTT-latest\lvgl;packages\LittlevGL2RTT-latest\lvgl\lv_core;packages\LittlevGL2RTT-latest\lvgl\lv_draw;packages\LittlevGL2RTT-latest\lvgl\lv_hal;packages\LittlevGL2RTT-latest\lvgl\lv_misc;packages\LittlevGL2RTT-latest\lvgl\lv_misc\lv_fonts;packages\LittlevGL2RTT-latest\lvgl\lv_objx;packages\LittlevGL2RTT-latest\lvgl\lv_themes;rt-thread\include;rt-thread\libcpu\arm\cortex-m7;rt-thread\libcpu\arm\common;rt-thread\components\dfs\include;rt-thread\components\dfs\filesystems\devfs;rt-thread\components\dfs\filesystems\elmfat;rt-thread\components\drivers\include;rt-thread\components\drivers\include;rt-thread\components\drivers\include;rt-thread\components\drivers\include;rt-thread\components\drivers\include;rt-thread\components\drivers\spi;rt-thread\components\drivers\include;rt-thread\components\drivers\include;rt-thread\components\finsh;rt-thread\components\libc\compilers\armlibc;rt-thread\components\libc\compilers\common</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -383,29 +383,14 @@
           <GroupName>Applications</GroupName>
           <Files>
             <File>
-              <FileName>device_test.c</FileName>
+              <FileName>littlevgl_app.c</FileName>
               <FileType>1</FileType>
-              <FilePath>applications\device_test.c</FilePath>
-            </File>
-            <File>
-              <FileName>lcd_init.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>applications\lcd_init.c</FilePath>
+              <FilePath>applications\littlevgl_app.c</FilePath>
             </File>
             <File>
               <FileName>main.c</FileName>
               <FileType>1</FileType>
               <FilePath>applications\main.c</FilePath>
-            </File>
-            <File>
-              <FileName>mem_dump.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>applications\mem_dump.c</FilePath>
-            </File>
-            <File>
-              <FileName>mem_test.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>applications\mem_test.c</FilePath>
             </File>
           </Files>
         </Group>
@@ -466,6 +451,11 @@
               <FileName>drv_sdio.c</FileName>
               <FileType>1</FileType>
               <FilePath>drivers\drv_sdio.c</FilePath>
+            </File>
+            <File>
+              <FileName>drv_dht12.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>drivers\drv_dht12.c</FilePath>
             </File>
           </Files>
         </Group>
@@ -827,7 +817,7 @@
                   <MiscControls> --c99 --gnu -g -W</MiscControls>
                   <Define> </Define>
                   <Undefine> </Undefine>
-                  <IncludePath></IncludePath>
+                  <IncludePath> </IncludePath>
                 </VariousControls>
               </Cads>
               <Aads>
@@ -1229,90 +1219,6 @@
           </Files>
         </Group>
         <Group>
-          <GroupName>LittlevGL2RTT_Demo</GroupName>
-          <GroupOption>
-            <CommonProperty>
-              <UseCPPCompiler>0</UseCPPCompiler>
-              <RVCTCodeConst>0</RVCTCodeConst>
-              <RVCTZI>0</RVCTZI>
-              <RVCTOtherData>0</RVCTOtherData>
-              <ModuleSelection>0</ModuleSelection>
-              <IncludeInBuild>1</IncludeInBuild>
-              <AlwaysBuild>0</AlwaysBuild>
-              <GenerateAssemblyFile>0</GenerateAssemblyFile>
-              <AssembleAssemblyFile>0</AssembleAssemblyFile>
-              <PublicsOnly>0</PublicsOnly>
-              <StopOnExitCode>3</StopOnExitCode>
-              <CustomArgument></CustomArgument>
-              <IncludeLibraryModules></IncludeLibraryModules>
-              <ComprImg>0</ComprImg>
-            </CommonProperty>
-            <GroupArmAds>
-              <Cads>
-                <interw>2</interw>
-                <Optim>0</Optim>
-                <oTime>2</oTime>
-                <SplitLS>2</SplitLS>
-                <OneElfS>2</OneElfS>
-                <Strict>2</Strict>
-                <EnumInt>2</EnumInt>
-                <PlainCh>2</PlainCh>
-                <Ropi>2</Ropi>
-                <Rwpi>2</Rwpi>
-                <wLevel>0</wLevel>
-                <uThumb>2</uThumb>
-                <uSurpInc>2</uSurpInc>
-                <uC99>2</uC99>
-                <uGnu>2</uGnu>
-                <useXO>2</useXO>
-                <v6Lang>0</v6Lang>
-                <v6LangP>0</v6LangP>
-                <vShortEn>2</vShortEn>
-                <vShortWch>2</vShortWch>
-                <v6Lto>2</v6Lto>
-                <v6WtE>2</v6WtE>
-                <v6Rtti>2</v6Rtti>
-                <VariousControls>
-                  <MiscControls> --c99 --gnu -g -W</MiscControls>
-                  <Define> </Define>
-                  <Undefine> </Undefine>
-                  <IncludePath></IncludePath>
-                </VariousControls>
-              </Cads>
-              <Aads>
-                <interw>2</interw>
-                <Ropi>2</Ropi>
-                <Rwpi>2</Rwpi>
-                <thumb>2</thumb>
-                <SplitLS>2</SplitLS>
-                <SwStkChk>2</SwStkChk>
-                <NoWarn>2</NoWarn>
-                <uSurpInc>2</uSurpInc>
-                <useXO>2</useXO>
-                <uClangAs>2</uClangAs>
-                <VariousControls>
-                  <MiscControls></MiscControls>
-                  <Define></Define>
-                  <Undefine></Undefine>
-                  <IncludePath></IncludePath>
-                </VariousControls>
-              </Aads>
-            </GroupArmAds>
-          </GroupOption>
-          <Files>
-            <File>
-              <FileName>littlevgl2rtt_demo.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>packages\LittlevGL2RTT-latest\example\littlevgl2rtt_demo.c</FilePath>
-            </File>
-            <File>
-              <FileName>lv_test_theme.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>packages\LittlevGL2RTT-latest\example\lv_test_theme.c</FilePath>
-            </File>
-          </Files>
-        </Group>
-        <Group>
           <GroupName>Kernel</GroupName>
           <Files>
             <File>
@@ -1525,7 +1431,7 @@
                   <MiscControls></MiscControls>
                   <Define> </Define>
                   <Undefine> </Undefine>
-                  <IncludePath></IncludePath>
+                  <IncludePath> </IncludePath>
                 </VariousControls>
               </Cads>
               <Aads>
