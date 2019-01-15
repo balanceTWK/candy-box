@@ -14,7 +14,6 @@ static struct rt_i2c_bus_device *dht12_i2c_device = RT_NULL;
 
 static rt_err_t read_regs(struct rt_i2c_bus_device *bus, rt_uint8_t reg, rt_uint8_t *data_buf, uint8_t len)
 {
-    rt_uint8_t reg_buf[2];
     struct rt_i2c_msg msgs[2];
 
     msgs[0].addr  = DHT12_ADDR;

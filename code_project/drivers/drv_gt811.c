@@ -230,7 +230,8 @@ void touch_irq(void *args)
     LOG_D("touch_irq!");
     rt_sem_release(&touch_sem);
 }
-#endif
+#endif /* PKG_USING_LITTLEVGL2RTT */
+
 int GT811_Init(void)
 {
     uint16_t version = 0;
