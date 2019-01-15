@@ -157,73 +157,9 @@
         <Bp>
           <Number>0</Number>
           <Type>0</Type>
-          <LineNumber>178</LineNumber>
-          <EnabledFlag>1</EnabledFlag>
-          <Address>1610721108</Address>
-          <ByteObject>0</ByteObject>
-          <HtxType>0</HtxType>
-          <ManyObjects>0</ManyObjects>
-          <SizeOfObject>0</SizeOfObject>
-          <BreakByAccess>0</BreakByAccess>
-          <BreakIfRCount>1</BreakIfRCount>
-          <Filename>packages\LittlevGL2RTT-latest\lvgl\lv_objx\lv_gauge.c</Filename>
-          <ExecCommand></ExecCommand>
-          <Expression>\\rtthread_imxrt\packages/LittlevGL2RTT-latest/lvgl/lv_objx/lv_gauge.c\178</Expression>
-        </Bp>
-        <Bp>
-          <Number>1</Number>
-          <Type>0</Type>
-          <LineNumber>140</LineNumber>
-          <EnabledFlag>1</EnabledFlag>
-          <Address>1610633868</Address>
-          <ByteObject>0</ByteObject>
-          <HtxType>0</HtxType>
-          <ManyObjects>0</ManyObjects>
-          <SizeOfObject>0</SizeOfObject>
-          <BreakByAccess>0</BreakByAccess>
-          <BreakIfRCount>1</BreakIfRCount>
-          <Filename>rt-thread\src\components.c</Filename>
-          <ExecCommand></ExecCommand>
-          <Expression>\\rtthread_imxrt\rt-thread/src/components.c\140</Expression>
-        </Bp>
-        <Bp>
-          <Number>2</Number>
-          <Type>0</Type>
-          <LineNumber>209</LineNumber>
-          <EnabledFlag>1</EnabledFlag>
-          <Address>1610798508</Address>
-          <ByteObject>0</ByteObject>
-          <HtxType>0</HtxType>
-          <ManyObjects>0</ManyObjects>
-          <SizeOfObject>0</SizeOfObject>
-          <BreakByAccess>0</BreakByAccess>
-          <BreakIfRCount>1</BreakIfRCount>
-          <Filename>applications\littlevgl_app.c</Filename>
-          <ExecCommand></ExecCommand>
-          <Expression>\\rtthread_imxrt\applications/littlevgl_app.c\209</Expression>
-        </Bp>
-        <Bp>
-          <Number>3</Number>
-          <Type>0</Type>
-          <LineNumber>210</LineNumber>
-          <EnabledFlag>1</EnabledFlag>
-          <Address>1610798520</Address>
-          <ByteObject>0</ByteObject>
-          <HtxType>0</HtxType>
-          <ManyObjects>0</ManyObjects>
-          <SizeOfObject>0</SizeOfObject>
-          <BreakByAccess>0</BreakByAccess>
-          <BreakIfRCount>1</BreakIfRCount>
-          <Filename>applications\littlevgl_app.c</Filename>
-          <ExecCommand></ExecCommand>
-          <Expression>\\rtthread_imxrt\applications/littlevgl_app.c\210</Expression>
-        </Bp>
-        <Bp>
-          <Number>4</Number>
-          <Type>0</Type>
           <LineNumber>166</LineNumber>
           <EnabledFlag>1</EnabledFlag>
-          <Address>1610721058</Address>
+          <Address>1610721062</Address>
           <ByteObject>0</ByteObject>
           <HtxType>0</HtxType>
           <ManyObjects>0</ManyObjects>
@@ -234,14 +170,47 @@
           <ExecCommand></ExecCommand>
           <Expression>\\rtthread_imxrt\packages/LittlevGL2RTT-latest/lvgl/lv_objx/lv_gauge.c\166</Expression>
         </Bp>
+        <Bp>
+          <Number>1</Number>
+          <Type>0</Type>
+          <LineNumber>308</LineNumber>
+          <EnabledFlag>1</EnabledFlag>
+          <Address>1610721982</Address>
+          <ByteObject>0</ByteObject>
+          <HtxType>0</HtxType>
+          <ManyObjects>0</ManyObjects>
+          <SizeOfObject>0</SizeOfObject>
+          <BreakByAccess>0</BreakByAccess>
+          <BreakIfRCount>1</BreakIfRCount>
+          <Filename>applications\littlevgl_app.c</Filename>
+          <ExecCommand></ExecCommand>
+          <Expression>\\rtthread_imxrt\applications/littlevgl_app.c\308</Expression>
+        </Bp>
+        <Bp>
+          <Number>2</Number>
+          <Type>0</Type>
+          <LineNumber>310</LineNumber>
+          <EnabledFlag>1</EnabledFlag>
+          <Address>0</Address>
+          <ByteObject>0</ByteObject>
+          <HtxType>0</HtxType>
+          <ManyObjects>0</ManyObjects>
+          <SizeOfObject>0</SizeOfObject>
+          <BreakByAccess>0</BreakByAccess>
+          <BreakIfRCount>0</BreakIfRCount>
+          <Filename>applications\littlevgl_app.c</Filename>
+          <ExecCommand></ExecCommand>
+          <Expression></Expression>
+        </Bp>
       </Breakpoint>
-      <WatchWindow1>
-        <Ww>
-          <count>0</count>
+      <MemoryWindow1>
+        <Mm>
           <WinNumber>1</WinNumber>
-          <ItemText>ext</ItemText>
-        </Ww>
-      </WatchWindow1>
+          <SubType>0</SubType>
+          <ItemText>0</ItemText>
+          <AccSizeX>0</AccSizeX>
+        </Mm>
+      </MemoryWindow1>
       <Tracepoint>
         <THDelay>0</THDelay>
       </Tracepoint>
@@ -297,7 +266,7 @@
       <GroupNumber>1</GroupNumber>
       <FileNumber>1</FileNumber>
       <FileType>1</FileType>
-      <tvExp>0</tvExp>
+      <tvExp>1</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
       <PathWithFileName>applications\littlevgl_app.c</PathWithFileName>
@@ -321,7 +290,7 @@
 
   <Group>
     <GroupName>Drivers</GroupName>
-    <tvExp>0</tvExp>
+    <tvExp>1</tvExp>
     <tvExpOptDlg>0</tvExpOptDlg>
     <cbSel>0</cbSel>
     <RteFlg>0</RteFlg>

@@ -312,7 +312,7 @@
           </ArmAdsMisc>
           <Cads>
             <interw>1</interw>
-            <Optim>1</Optim>
+            <Optim>3</Optim>
             <oTime>0</oTime>
             <SplitLS>0</SplitLS>
             <OneElfS>1</OneElfS>
@@ -335,7 +335,7 @@
             <v6WtE>0</v6WtE>
             <v6Rtti>0</v6Rtti>
             <VariousControls>
-              <MiscControls>--library_interface=armcc --library_type=standardlib --diag_suppress=66,1296,186</MiscControls>
+              <MiscControls>--gnu -g -W --library_interface=armcc --library_type=standardlib --diag_suppress=66,1296,186</MiscControls>
               <Define>RT_USING_ARM_LIBC, EVK_MCIMXRM, CPU_MIMXRT1052DVL6B, SKIP_SYSCLK_INIT, FSL_SDK_ENABLE_DRIVER_CACHE_CONTROL=1</Define>
               <Undefine></Undefine>
               <IncludePath>applications;.;drivers;Libraries;Libraries\drivers;Libraries\utilities;Libraries\CMSIS\Include;packages\LittlevGL2RTT-latest;packages\LittlevGL2RTT-latest\lvgl;packages\LittlevGL2RTT-latest\lvgl\lv_core;packages\LittlevGL2RTT-latest\lvgl\lv_draw;packages\LittlevGL2RTT-latest\lvgl\lv_hal;packages\LittlevGL2RTT-latest\lvgl\lv_misc;packages\LittlevGL2RTT-latest\lvgl\lv_fonts;packages\LittlevGL2RTT-latest\lvgl\lv_objx;packages\LittlevGL2RTT-latest\lvgl\lv_themes;rt-thread\include;rt-thread\libcpu\arm\cortex-m7;rt-thread\libcpu\arm\common;rt-thread\components\dfs\include;rt-thread\components\dfs\filesystems\devfs;rt-thread\components\dfs\filesystems\elmfat;rt-thread\components\drivers\include;rt-thread\components\drivers\include;rt-thread\components\drivers\include;rt-thread\components\drivers\include;rt-thread\components\drivers\include;rt-thread\components\drivers\spi;rt-thread\components\drivers\include;rt-thread\components\drivers\include;rt-thread\components\finsh;rt-thread\components\libc\compilers\armlibc;rt-thread\components\libc\compilers\common</IncludePath>
@@ -386,57 +386,6 @@
               <FileName>littlevgl_app.c</FileName>
               <FileType>1</FileType>
               <FilePath>applications\littlevgl_app.c</FilePath>
-              <FileOption>
-                <CommonProperty>
-                  <UseCPPCompiler>2</UseCPPCompiler>
-                  <RVCTCodeConst>0</RVCTCodeConst>
-                  <RVCTZI>0</RVCTZI>
-                  <RVCTOtherData>0</RVCTOtherData>
-                  <ModuleSelection>0</ModuleSelection>
-                  <IncludeInBuild>2</IncludeInBuild>
-                  <AlwaysBuild>2</AlwaysBuild>
-                  <GenerateAssemblyFile>2</GenerateAssemblyFile>
-                  <AssembleAssemblyFile>2</AssembleAssemblyFile>
-                  <PublicsOnly>2</PublicsOnly>
-                  <StopOnExitCode>11</StopOnExitCode>
-                  <CustomArgument></CustomArgument>
-                  <IncludeLibraryModules></IncludeLibraryModules>
-                  <ComprImg>1</ComprImg>
-                </CommonProperty>
-                <FileArmAds>
-                  <Cads>
-                    <interw>2</interw>
-                    <Optim>0</Optim>
-                    <oTime>2</oTime>
-                    <SplitLS>2</SplitLS>
-                    <OneElfS>2</OneElfS>
-                    <Strict>2</Strict>
-                    <EnumInt>2</EnumInt>
-                    <PlainCh>2</PlainCh>
-                    <Ropi>2</Ropi>
-                    <Rwpi>2</Rwpi>
-                    <wLevel>0</wLevel>
-                    <uThumb>2</uThumb>
-                    <uSurpInc>2</uSurpInc>
-                    <uC99>1</uC99>
-                    <uGnu>1</uGnu>
-                    <useXO>2</useXO>
-                    <v6Lang>0</v6Lang>
-                    <v6LangP>0</v6LangP>
-                    <vShortEn>2</vShortEn>
-                    <vShortWch>2</vShortWch>
-                    <v6Lto>2</v6Lto>
-                    <v6WtE>2</v6WtE>
-                    <v6Rtti>2</v6Rtti>
-                    <VariousControls>
-                      <MiscControls></MiscControls>
-                      <Define></Define>
-                      <Undefine></Undefine>
-                      <IncludePath></IncludePath>
-                    </VariousControls>
-                  </Cads>
-                </FileArmAds>
-              </FileOption>
             </File>
             <File>
               <FileName>main.c</FileName>
@@ -854,8 +803,8 @@
                 <wLevel>0</wLevel>
                 <uThumb>2</uThumb>
                 <uSurpInc>2</uSurpInc>
-                <uC99>0</uC99>
-                <uGnu>1</uGnu>
+                <uC99>2</uC99>
+                <uGnu>2</uGnu>
                 <useXO>2</useXO>
                 <v6Lang>0</v6Lang>
                 <v6LangP>0</v6LangP>
@@ -865,9 +814,9 @@
                 <v6WtE>2</v6WtE>
                 <v6Rtti>2</v6Rtti>
                 <VariousControls>
-                  <MiscControls></MiscControls>
-                  <Define></Define>
-                  <Undefine></Undefine>
+                  <MiscControls> --c99 --gnu -g -W</MiscControls>
+                  <Define> </Define>
+                  <Undefine> </Undefine>
                   <IncludePath></IncludePath>
                 </VariousControls>
               </Cads>
