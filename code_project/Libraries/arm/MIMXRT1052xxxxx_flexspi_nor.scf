@@ -45,20 +45,25 @@
 ** ###################################################################
 */
 
-#define m_flash_config_start           0x60000000
+#define m_flash_config_start           0x60000000 /* FlexSPI ciphertext */
 #define m_flash_config_size            0x00001000
 
 #define m_ivt_start                    0x60001000
 #define m_ivt_size                     0x00001000
 
-#define m_text_start                   0x60002000
+#define m_text_start                   0x60002000 /*  */
 #define m_text_size                    0x1F7FE000
 
-#define m_data_start                   0x20000000
-#define m_data_size                    0x00020000
+#define m_data_start                   0x80000000
+#define m_data_size                    0x00200000 /* SDRAM 2MB */
+
+//#define m_data_start                   0x20000000
+//#define m_data_size                    0x00040000 /* DTCM         256KB */
+//#define m_data_size                    0x00038000 /* DTCM         224KB */
+//#define m_data_size                    0x00020000 /* DTCM         128KB */
 
 #define m_ncache_start                 0x81E00000
-#define m_ncache_size                  0x00200000
+#define m_ncache_size                  0x00200000 /* SDRAM ncache 2MB */
 
 /* Sizes */
 #if (defined(__stack_size__))
@@ -118,7 +123,7 @@ LR_IROM1 m_text_start m_text_size
 
     ; ncache RW data
     RW_m_ncache m_ncache_start m_ncache_size 
-    { 
+    {
         * (NonCacheable)
     }
 }
