@@ -35,7 +35,7 @@
 #endif
 
 #include <board.h>
-
+#include "spi_wifi_rw007.h"
 void dump_clock(void)
 {
 //    rt_kprintf("OSC clock : %d\n",                  CLOCK_GetFreq(kCLOCK_OscClk));
@@ -113,15 +113,18 @@ void dump_link_info(void)
     DUMP_SYMBOL(heap_start);
 #endif
 }
+#define GPIO_AD_B0_14 57
+void pin_irq_callback(void*p)
+{
+    rt_kprintf("pin_irq_callback\n");
+}
+
+#include "app_gui.h"
 
 int main(void)
 {
-    dump_clock();
-    dump_cc_info();
-    dump_link_info();
 
-    rt_kprintf("build time: %s %s\n", __DATE__, __TIME__);
-
+    rt_lvgl_init();
 #if defined(RT_USING_DFS) && defined(RT_USING_SDIO)
     rt_uint32_t result;
     result = mmcsd_wait_cd_changed(RT_TICK_PER_SECOND);
@@ -139,12 +142,42 @@ int main(void)
     }
 #endif
 
+//    extern int wifi_spi_device_init(const char * device_name);
+//    wifi_spi_device_init("wifi_spi30");
+//    rt_hw_wifi_init("wifi_spi3",0);
+    rt_pin_mode(GPIO_AD_B0_14,PIN_MODE_OUTPUT);
+    rt_pin_write(GPIO_AD_B0_14,PIN_LOW);
+//    rt_pin_attach_irq(GPIO_AD_B0_14,PIN_IRQ_MODE_FALLING,pin_irq_callback,RT_NULL);
+//    rt_pin_irq_enable(GPIO_AD_B0_14,PIN_IRQ_ENABLE);
     while (1)
     {
         rt_thread_delay(RT_TICK_PER_SECOND);
     }
 }
 
+rt_uint8_t *test_arr;
+static rt_err_t test_malloc(void)
+{
+    test_arr=rt_malloc(32*1024);
+    
+    return RT_EOK;
+}
 
+static rt_err_t test_free(void)
+{
+    rt_free(test_arr);
+    
+    return RT_EOK;
+}
+
+static rt_err_t test_rt_hw_wifi_init(void)
+{
+    rt_hw_wifi_init("wifi_spi3",MODE_STATION);
+    return RT_EOK;
+}
+
+MSH_CMD_EXPORT(test_malloc, malloc);
+MSH_CMD_EXPORT(test_free, malloc);
+MSH_CMD_EXPORT(test_rt_hw_wifi_init, malloc);
 
 /*@}*/

@@ -2,6 +2,8 @@ mainmenu "RT-Thread Configuration"
 
 config PKG_USING_RW007
 	bool "Using RW007"
+    select RT_USING_LWIP
+    select RT_USING_SPIBUS3
     config RW007_USING_DEMO
         bool "RW007 demo"
         depends on PKG_USING_RW007
@@ -346,35 +348,35 @@ menu "Select lcd driver"
 
     config LCD_WIDTH
         int "Width pixel num"
-        default 800
+        default 1024
         depends on RT_USING_LCD
     config LCD_HEIGHT
         int "Height pixel num" 
-        default 480
+        default 600
         depends on RT_USING_LCD
     config LCD_HFP
         int "HFP"
-        default 4
+        default 19
         depends on RT_USING_LCD
     config LCD_VFP
         int "VFP"
-        default 4
+        default 2
         depends on RT_USING_LCD
     config LCD_HBP
         int "HBP"
-        default 8
+        default 159
         depends on RT_USING_LCD
     config LCD_VBP
         int "VBP"
-        default 2
+        default 22
         depends on RT_USING_LCD
     config LCD_HSW
         int "HSW"
-        default 40
+        default 10
         depends on RT_USING_LCD
     config LCD_VSW
         int "VSW"
-        default 10
+        default 2
         depends on RT_USING_LCD 
     config LCD_BL_PIN
         int "Backlight pin index"
@@ -382,7 +384,7 @@ menu "Select lcd driver"
         depends on RT_USING_LCD 
     config LCD_RST_PIN
         int "Reset pin index"
-        default 45
+        default 44
         depends on RT_USING_LCD 
 endmenu
 
