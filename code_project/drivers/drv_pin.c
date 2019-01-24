@@ -1,11 +1,7 @@
 /*
- * File      : drv_pin.c
- * This file is part of RT-Thread RTOS
- * COPYRIGHT (C) 2006-2013, RT-Thread Development Team
+ * Copyright (c) 2006-2018, RT-Thread Development Team
  *
- * The license and distribution terms for this file may be
- * found in the file LICENSE in this distribution or at
- * http://www.rt-thread.org/license/LICENSE
+ * SPDX-License-Identifier: Apache-2.0
  *
  * Change Logs:
  * Date           Author       Notes
@@ -48,15 +44,15 @@ static struct rt1052_pin rt1052_pin_map[] =
     __RT1052_PIN_DEFAULT,
 
     /* GPIO4 */
-    __RT1052_PIN(1, GPIO4,  0),     /* GPIO_EMC_00 */
-    __RT1052_PIN(2, GPIO4,  1),     /* GPIO_EMC_01 */
-    __RT1052_PIN(3, GPIO4,  2),     /* GPIO_EMC_02 */
-    __RT1052_PIN(4, GPIO4,  3),     /* GPIO_EMC_03 */
-    __RT1052_PIN(5, GPIO4,  4),     /* GPIO_EMC_04 */
-    __RT1052_PIN(6, GPIO4,  5),     /* GPIO_EMC_05 */
-    __RT1052_PIN(7, GPIO4,  6),     /* GPIO_EMC_06 */
-    __RT1052_PIN(8, GPIO4,  7),     /* GPIO_EMC_07 */
-    __RT1052_PIN(9, GPIO4,  8),     /* GPIO_EMC_08 */
+    __RT1052_PIN( 1, GPIO4,  0),    /* GPIO_EMC_00 */
+    __RT1052_PIN( 2, GPIO4,  1),    /* GPIO_EMC_01 */
+    __RT1052_PIN( 3, GPIO4,  2),    /* GPIO_EMC_02 */
+    __RT1052_PIN( 4, GPIO4,  3),    /* GPIO_EMC_03 */
+    __RT1052_PIN( 5, GPIO4,  4),    /* GPIO_EMC_04 */
+    __RT1052_PIN( 6, GPIO4,  5),    /* GPIO_EMC_05 */
+    __RT1052_PIN( 7, GPIO4,  6),    /* GPIO_EMC_06 */
+    __RT1052_PIN( 8, GPIO4,  7),    /* GPIO_EMC_07 */
+    __RT1052_PIN( 9, GPIO4,  8),    /* GPIO_EMC_08 */
     __RT1052_PIN(10, GPIO4,  9),    /* GPIO_EMC_09 */
     __RT1052_PIN(11, GPIO4, 10),    /* GPIO_EMC_10 */
     __RT1052_PIN(12, GPIO4, 11),    /* GPIO_EMC_11 */
@@ -127,31 +123,31 @@ static struct rt1052_pin rt1052_pin_map[] =
     __RT1052_PIN(74, GPIO1, 31),    /* GPIO_AD_B1_15 */
 
     /* GPIO2 */
-    __RT1052_PIN(75, GPIO2,  0),     /* GPIO_B0_00 */
-    __RT1052_PIN(76, GPIO2,  1),     /* GPIO_B0_01 */
-    __RT1052_PIN(77, GPIO2,  2),     /* GPIO_B0_02 */
-    __RT1052_PIN(78, GPIO2,  3),     /* GPIO_B0_03 */
-    __RT1052_PIN(79, GPIO2,  4),     /* GPIO_B0_04 */
-    __RT1052_PIN(80, GPIO2,  5),     /* GPIO_B0_05 */
-    __RT1052_PIN(81, GPIO2,  6),     /* GPIO_B0_06 */
-    __RT1052_PIN(82, GPIO2,  7),     /* GPIO_B0_07 */
-    __RT1052_PIN(83, GPIO2,  8),     /* GPIO_B0_08 */
-    __RT1052_PIN(84, GPIO2,  9),     /* GPIO_B0_09 */
-    __RT1052_PIN(85, GPIO2, 10),     /* GPIO_B0_10 */
-    __RT1052_PIN(86, GPIO2, 11),     /* GPIO_B0_11 */
-    __RT1052_PIN(87, GPIO2, 12),     /* GPIO_B0_12 */
-    __RT1052_PIN(88, GPIO2, 13),     /* GPIO_B0_13 */
-    __RT1052_PIN(89, GPIO2, 14),     /* GPIO_B0_14 */
-    __RT1052_PIN(90, GPIO2, 15),     /* GPIO_B0_15 */
-    __RT1052_PIN(91, GPIO2, 16),     /* GPIO_B1_00 */
-    __RT1052_PIN(92, GPIO2, 17),     /* GPIO_B1_01 */
-    __RT1052_PIN(93, GPIO2, 18),     /* GPIO_B1_02 */
-    __RT1052_PIN(94, GPIO2, 19),     /* GPIO_B1_03 */
-    __RT1052_PIN(95, GPIO2, 20),     /* GPIO_B1_04 */
-    __RT1052_PIN(96, GPIO2, 21),     /* GPIO_B1_05 */
-    __RT1052_PIN(97, GPIO2, 22),     /* GPIO_B1_06 */
-    __RT1052_PIN(98, GPIO2, 23),     /* GPIO_B1_07 */
-    __RT1052_PIN(99, GPIO2, 24),     /* GPIO_B1_08 */
+    __RT1052_PIN( 75, GPIO2,  0),    /* GPIO_B0_00 */
+    __RT1052_PIN( 76, GPIO2,  1),    /* GPIO_B0_01 */
+    __RT1052_PIN( 77, GPIO2,  2),    /* GPIO_B0_02 */
+    __RT1052_PIN( 78, GPIO2,  3),    /* GPIO_B0_03 */
+    __RT1052_PIN( 79, GPIO2,  4),    /* GPIO_B0_04 */
+    __RT1052_PIN( 80, GPIO2,  5),    /* GPIO_B0_05 */
+    __RT1052_PIN( 81, GPIO2,  6),    /* GPIO_B0_06 */
+    __RT1052_PIN( 82, GPIO2,  7),    /* GPIO_B0_07 */
+    __RT1052_PIN( 83, GPIO2,  8),    /* GPIO_B0_08 */
+    __RT1052_PIN( 84, GPIO2,  9),    /* GPIO_B0_09 */
+    __RT1052_PIN( 85, GPIO2, 10),    /* GPIO_B0_10 */
+    __RT1052_PIN( 86, GPIO2, 11),    /* GPIO_B0_11 */
+    __RT1052_PIN( 87, GPIO2, 12),    /* GPIO_B0_12 */
+    __RT1052_PIN( 88, GPIO2, 13),    /* GPIO_B0_13 */
+    __RT1052_PIN( 89, GPIO2, 14),    /* GPIO_B0_14 */
+    __RT1052_PIN( 90, GPIO2, 15),    /* GPIO_B0_15 */
+    __RT1052_PIN( 91, GPIO2, 16),    /* GPIO_B1_00 */
+    __RT1052_PIN( 92, GPIO2, 17),    /* GPIO_B1_01 */
+    __RT1052_PIN( 93, GPIO2, 18),    /* GPIO_B1_02 */
+    __RT1052_PIN( 94, GPIO2, 19),    /* GPIO_B1_03 */
+    __RT1052_PIN( 95, GPIO2, 20),    /* GPIO_B1_04 */
+    __RT1052_PIN( 96, GPIO2, 21),    /* GPIO_B1_05 */
+    __RT1052_PIN( 97, GPIO2, 22),    /* GPIO_B1_06 */
+    __RT1052_PIN( 98, GPIO2, 23),    /* GPIO_B1_07 */
+    __RT1052_PIN( 99, GPIO2, 24),    /* GPIO_B1_08 */
     __RT1052_PIN(100, GPIO2, 25),    /* GPIO_B1_09 */
     __RT1052_PIN(101, GPIO2, 26),    /* GPIO_B1_10 */
     __RT1052_PIN(102, GPIO2, 27),    /* GPIO_B1_11 */
@@ -362,9 +358,9 @@ void GPIO5_Combined_0_15_IRQHandler(void)
 
 static IRQn_Type rt1052_get_irqnum(GPIO_Type *gpio, rt_uint32_t gpio_pin)
 {
-    IRQn_Type irq_num = -100;  /* Invalid interrupt number */
-
-    if (gpio == GPIO1)
+    IRQn_Type irq_num = NotAvail_IRQn;  /* Invalid interrupt number */
+    
+    if(gpio == GPIO1)
     {
         if (gpio_pin <= 15)
         {

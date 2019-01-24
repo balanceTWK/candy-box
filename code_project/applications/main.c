@@ -146,7 +146,7 @@ int main(void)
 //    wifi_spi_device_init("wifi_spi30");
 //    rt_hw_wifi_init("wifi_spi3",0);
     rt_pin_mode(GPIO_AD_B0_14,PIN_MODE_OUTPUT);
-    rt_pin_write(GPIO_AD_B0_14,PIN_LOW);
+    rt_pin_write(GPIO_AD_B0_14,PIN_HIGH);
 //    rt_pin_attach_irq(GPIO_AD_B0_14,PIN_IRQ_MODE_FALLING,pin_irq_callback,RT_NULL);
 //    rt_pin_irq_enable(GPIO_AD_B0_14,PIN_IRQ_ENABLE);
     while (1)
