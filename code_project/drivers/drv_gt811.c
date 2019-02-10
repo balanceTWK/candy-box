@@ -274,7 +274,7 @@ int GT811_Init(void)
         rt_pin_mode(GT811_INT_PIN, PIN_MODE_INPUT_PULLUP);
         rt_pin_attach_irq(GT811_INT_PIN,PIN_IRQ_MODE_FALLING,touch_irq,RT_NULL);
         rt_pin_irq_enable(GT811_INT_PIN, PIN_IRQ_ENABLE);
-        thread = rt_thread_create("lcd_touch", touch_thread_entry, RT_NULL, 512, 7, 10); 
+        thread = rt_thread_create("lcd_touch", touch_thread_entry, RT_NULL, 512, 9, 10); 
         rt_thread_startup(thread);
 #endif
 

@@ -1,8 +1,5 @@
 #include "app_gui.h"
 
-#include <rtthread.h>
-#include "lvgl.h" 
-
 #define DRV_DEBUG
 #define DBG_ENABLE
 #define DBG_SECTION_NAME "app.gui"

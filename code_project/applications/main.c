@@ -124,6 +124,12 @@ void pin_irq_callback(void*p)
 int main(void)
 {
 
+//    rt_pin_attach_irq(GPIO_AD_B0_14, PIN_IRQ_MODE_FALLING, pin_irq_callback, RT_NULL);
+//    rt_pin_irq_enable(GPIO_AD_B0_14, PIN_IRQ_ENABLE);
+    
+    rt_pin_mode(GPIO_AD_B0_14, PIN_MODE_INPUT_PULLDOWN);
+//    rt_pin_write(GPIO_AD_B0_14, PIN_HIGH);
+    
     rt_lvgl_init();
 #if defined(RT_USING_DFS) && defined(RT_USING_SDIO)
     rt_uint32_t result;
@@ -142,13 +148,11 @@ int main(void)
     }
 #endif
 
-//    extern int wifi_spi_device_init(const char * device_name);
-//    wifi_spi_device_init("wifi_spi30");
-//    rt_hw_wifi_init("wifi_spi3",0);
-    rt_pin_mode(GPIO_AD_B0_14,PIN_MODE_OUTPUT);
-    rt_pin_write(GPIO_AD_B0_14,PIN_HIGH);
-//    rt_pin_attach_irq(GPIO_AD_B0_14,PIN_IRQ_MODE_FALLING,pin_irq_callback,RT_NULL);
-//    rt_pin_irq_enable(GPIO_AD_B0_14,PIN_IRQ_ENABLE);
+    if(rt_hw_wifi_init("wifi_spi3",MODE_STATION) != RT_EOK )
+    {
+        rt_kprintf("rt_hw_wifi_init err\n");
+    }
+
     while (1)
     {
         rt_thread_delay(RT_TICK_PER_SECOND);
@@ -170,14 +174,7 @@ static rt_err_t test_free(void)
     return RT_EOK;
 }
 
-static rt_err_t test_rt_hw_wifi_init(void)
-{
-    rt_hw_wifi_init("wifi_spi3",MODE_STATION);
-    return RT_EOK;
-}
-
 MSH_CMD_EXPORT(test_malloc, malloc);
 MSH_CMD_EXPORT(test_free, malloc);
-MSH_CMD_EXPORT(test_rt_hw_wifi_init, malloc);
 
 /*@}*/
